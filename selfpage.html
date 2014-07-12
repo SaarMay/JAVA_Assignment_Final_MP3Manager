@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gonna Find You - Music Ranking</title>
+<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/audiojs/audio.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<!--Set portrait as the background image-->
+		<h1>Username</h1>
+
+		<form action="search.action" method="post" id="searchbar" style="display:none">
+			<p><input type="text" name="searchtext" id="searchinputBox" title="tell me what you want...">
+   			<input type="button" value="Find U" class="searchBtn" title="find music"></p>
+		</form>
+
+	</header>
+	
+	<div id="content">
+
+		<div class="audiobox">
+			<script>
+  				audiojs.events.ready(function() {
+ 	  				var as = audiojs.createAll();
+ 		 		});
+			</script>
+			
+			<audio src="" id="player"></audio>
+		</div>
+
+		<div id="downloadList">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<div id="uploadList">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li>
+					<form action="uploadmic" method="post" enctype="multipart/form-data">
+						<input type="file" name="micUploador">
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<footer>
+		<a href="index.html">Home</a>
+	</footer>
+</body>
+
+</html>

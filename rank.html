@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Gonna Find You</title>
+<title>Gonna Find You - Music Ranking</title>
 <script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="scripts/audiojs/audio.min.js"></script>
 </head>
@@ -27,8 +27,16 @@
         	</li>
     	</ul>
 		</nav>
+		
 		<h1 id="pageTitle">Gonna Find U</h1>
+
+		<form action="search.action" method="post" id="searchbar" style="display:none">
+			<input type="text" name="searchtext" id="searchinputBox" title="tell me what you want...">
+   			<input type="button" value="Find U" class="searchBtn" title="find music">
+		</form>
+	
 	</header>
+	
 	<div id="content">
 		<div id="loadRankList">
 			<div class="listItem">
@@ -57,7 +65,15 @@
 		</div>
 	</div>
 
-	<div class="bottomBar">
-		<audio src="" id="player"></audio>
-	</div>
+	<footer>
+		<div class="audiobox">
+			<script>
+  				audiojs.events.ready(function() {
+ 	  				var as = audiojs.createAll();
+ 		 		});
+			</script>
+			
+			<audio src="" id="player"></audio>
+		</div>
+	</footer>
 </body>
