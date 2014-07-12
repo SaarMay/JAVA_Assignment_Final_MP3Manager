@@ -5,6 +5,7 @@
 <title>Gonna Find You</title>
 <script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="scripts/audiojs/audio.min.js"></script>
+<script type="text/javascript" src="scripts/index.js"></script>
 </head>
 
 <body>
@@ -22,11 +23,11 @@
         	<a href="rank.html">&nbsp;&nbsp;Rank&nbsp;&nbsp;|</a>
         </li>
         
-        <li id="loginBtn">
-        	<a href="rank.html">&nbsp;&nbsp;Login&nbsp;&nbsp;|</a>
+        <li>
+        	<input type="button" id="loginBtn" value="&nbsp;&nbsp;Login&nbsp;&nbsp;|" onclick="showLogin()">
         </li>
     	<li id="homeBtn" style="display:none">
-        	<a href="rank.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
+        	<a href="selfpage.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
         </li>
     </ul><div></div>
 </nav>
@@ -44,9 +45,10 @@
 
 <div id="loginIndex" style="display:none">
 	<!--selector of login and register-->
+    <input type="button" name="loginClose" id="close" value="close" onclick="closeLogin()">
     <div id="lrselector">
-    	<input type="button" name="login" id="toLogin" class="lrBtns">
-        <input type="button" name="register" id="toRegister" class="lrBtns">
+    	<input type="button" name="login" id="toLogin" class="lrBtns" onclick="Login()">
+        <input type="button" name="register" id="toRegist" class="lrBtns" onclick="Regist()">
     </div>
     
     <!-- Sign in form -->  
@@ -54,7 +56,7 @@
     	<p>Username: <input type="text" class="lrtext" name="username" value=""></p>
         <p>Password: <input type="text" class="lrtext"></p>
         <br><br>
-        <p><input type="submit" name="lsubmit" value="SIGN IN"></p>
+        <p><input type="submit" name="lsubmit" value="SIGN IN" onclick="logged()"></p>
     </form>
     
     <!--Sign up-->
@@ -64,32 +66,17 @@
         <p>Password: <input type="text" class="lrtext" name="regispsw"></p>
         <p>Confrim Password: <input type="text" class="lrtext" name="regisconfirm"></p>
         <br><br>
-        <p><input type="submit" name = "rsubmit" value="SIGN UP"></p>
+        <p><input type="submit" name = "rsubmit" value="SIGN UP" onclick="registed"></p>
     </form>
     </form>
 </div>
 
 <!-- Music Boxes Dynamic addin-->
 <div class="musicBox">
-	<div class="introImg">
-    	<input type="button" name="play" class="micBoxBtns">
-        <input type="button" name="download" class="micBoxBtns">
-        <input type="button" name="collect" class="micBoxBtns">
-    </div>
-    <div class="musicInfo">
-    	<p id = "micName">Wicked Man's Rest</p>
-        <p>
-            <span class="micuploader"></span>
-            <span class="micuploadtime"></span>
-        </p>
-    </div>
-</div>
-
-<div class="musicBox">
     <div class="introImg">
         <input type="button" name="play" class="micBoxBtns">
-        <input type="button" name="download" class="micBoxBtns">
-        <input type="button" name="collect" class="micBoxBtns">
+        <input type="button" name="download" class="micBoxhBtns" style="display:none">
+        <input type="button" name="collect" class="micBoxhBtns" style="display:none">
     </div>
     <div class="musicInfo">
         <p id = "micName">Wicked Man's Rest</p>
@@ -103,8 +90,8 @@
 <div class="musicBox">
     <div class="introImg">
         <input type="button" name="play" class="micBoxBtns">
-        <input type="button" name="download" class="micBoxBtns">
-        <input type="button" name="collect" class="micBoxBtns">
+        <input type="button" name="download" class="micBoxhBtns" style="display:none">
+        <input type="button" name="collect" class="micBoxhBtns" style="display:none">
     </div>
     <div class="musicInfo">
         <p id = "micName">Wicked Man's Rest</p>
@@ -118,8 +105,23 @@
 <div class="musicBox">
     <div class="introImg">
         <input type="button" name="play" class="micBoxBtns">
-        <input type="button" name="download" class="micBoxBtns">
-        <input type="button" name="collect" class="micBoxBtns">
+        <input type="button" name="download" class="michBoxBtns" style="display:none">
+        <input type="button" name="collect" class="michBoxBtns" style="display:none">
+    </div>
+    <div class="musicInfo">
+        <p id = "micName">Wicked Man's Rest</p>
+        <p>
+            <span class="micuploader"></span>
+            <span class="micuploadtime"></span>
+        </p>
+    </div>
+</div>
+
+<div class="musicBox">
+    <div class="introImg">
+        <input type="button" name="play" class="micBoxBtns">
+        <input type="button" name="download" class="michBoxBtns" style="display:none">
+        <input type="button" name="collect" class="michBoxBtns" style="display:none">
     </div>
     <div class="musicInfo">
         <p id = "micName">Wicked Man's Rest</p>
