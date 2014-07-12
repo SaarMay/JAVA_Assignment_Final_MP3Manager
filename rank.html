@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gonna Find You</title>
+<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/audiojs/audio.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav id="mainNav">
+		<ul id="navList">
+    		<li id="musicBtn">
+       	 		<a href="index.html">&nbsp;&nbsp;Music&nbsp;&nbsp;|</a>
+       		</li>
+        
+       		<li id="rankBtn">
+        		<a href="rank.html">&nbsp;&nbsp;Rank&nbsp;&nbsp;|</a>
+        	</li>
+        
+        	<li id="loginBtn">
+        		<a href="rank.html">&nbsp;&nbsp;Login&nbsp;&nbsp;|</a>
+        	</li>
+    		<li id="homeBtn" style="display:none">
+        		<a href="rank.html">&nbsp;&nbsp;Home&nbsp;&nbsp;</a>
+        	</li>
+    	</ul>
+		</nav>
+		<h1 id="pageTitle">Gonna Find U</h1>
+	</header>
+	<div id="content">
+		<div id="loadRankList">
+			<div class="listItem">
+				<span class="rankNum"></span>
+				<span class="micname"></span>
+				<div><input type="button" name="download" class="loadBtn"><span id="downloadTimes"></span></div>	
+				<div><input type="button" name="play" class="playBtn"><span id="playTimes"></span></div>
+			</div>
+		</div>
+		
+		<div id="playRankLiat">
+			<div class="listItem">
+				<span class="rankNum"></span>
+				<span class="micname"></span>
+				<div><input type="button" name="play"><span id="playTimes"></span></div>
+				<div><input type="button" name="download"><span id="downloadTimes"></span></div>
+			</div>
+		</div>
+
+		<div class="pageSelector">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="bottomBar">
+		<audio src="" id="player"></audio>
+	</div>
+</body>

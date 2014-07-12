@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Gonna Find You</title>
+<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="scripts/audiojs/audio.min.js"></script>
 </head>
 
 <body>
@@ -75,49 +77,68 @@
         <input type="button" name="collect" class="micBoxBtns">
     </div>
     <div class="musicInfo">
-    	<p>Wicked Man's Rest</p>
-        <p>other information</p>
+    	<p id = "micName">Wicked Man's Rest</p>
+        <p>
+            <span class="micuploader"></span>
+            <span class="micuploadtime"></span>
+        </p>
     </div>
 </div>
 
 <div class="musicBox">
-	<div class="introImg">
-    	<input type="button" name="play" class="micBoxBtns">
+    <div class="introImg">
+        <input type="button" name="play" class="micBoxBtns">
         <input type="button" name="download" class="micBoxBtns">
         <input type="button" name="collect" class="micBoxBtns">
     </div>
     <div class="musicInfo">
-    	<p>Wicked Man's Rest</p>
-        <p>other information</p>
+        <p id = "micName">Wicked Man's Rest</p>
+        <p>
+            <span class="micuploader"></span>
+            <span class="micuploadtime"></span>
+        </p>
     </div>
 </div>
 
 <div class="musicBox">
-	<div class="introImg">
-    	<input type="button" name="play" class="micBoxBtns">
+    <div class="introImg">
+        <input type="button" name="play" class="micBoxBtns">
         <input type="button" name="download" class="micBoxBtns">
         <input type="button" name="collect" class="micBoxBtns">
     </div>
     <div class="musicInfo">
-    	<p>Wicked Man's Rest</p>
-        <p>other information</p>
+        <p id = "micName">Wicked Man's Rest</p>
+        <p>
+            <span class="micuploader"></span>
+            <span class="micuploadtime"></span>
+        </p>
     </div>
 </div>
 
 <div class="musicBox">
-	<div class="introImg">
-    	<input type="button" name="play" class="micBoxBtns">
+    <div class="introImg">
+        <input type="button" name="play" class="micBoxBtns">
         <input type="button" name="download" class="micBoxBtns">
         <input type="button" name="collect" class="micBoxBtns">
     </div>
     <div class="musicInfo">
-    	<p>Wicked Man's Rest</p>
-        <p>other information</p>
+        <p id = "micName">Wicked Man's Rest</p>
+        <p>
+            <span class="micuploader"></span>
+            <span class="micuploadtime"></span>
+        </p>
     </div>
 </div>
+</div>
 
-<div class="buttomBar">
-    <audio src="./sound/current.mp3" id="player">
+<div class="buttomBar" style="height:30px;">
+    <script>
+  		audiojs.events.ready(function() {
+   			var as = audiojs.createAll();
+ 	 	});
+	</script>
+
+	<audio src="sound/current.mp3" id="music">
     </audio>
 </div>
 
